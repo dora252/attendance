@@ -1,0 +1,44 @@
+.navbar-brand{
+    font-size: 20px;
+}
+
+.nav-item{
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+#navname{
+    color:white;
+}
+
+.user-content {
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+
+#title{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#navtitle{
+    font-size: 30px;
+}
+
+
+.button-form ul {
+    padding-left: 0;
+    padding-right: auto;
+    text-align: center;
+}
+
+.button-form ul li{
+    display: inline-block;
+    width: 400px;
+    height: 30px;
+}
+

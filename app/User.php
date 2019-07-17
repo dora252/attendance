@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -26,4 +27,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function attendance()
+    {
+        return $this->hasMany(Time::class);
+    }
+    
+    public function getusers()
+    {
+        $user = $user->id;
+        $userstart = $user->times()->start_time();
+        $userend = $user->times()->end_time();
+        return User::whereIn('user_id', $user);
+    }
 }

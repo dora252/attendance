@@ -11,9 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','IndexController@index' );
+Route::get('users/{id}','IndexController@show')->name('users.show');
+Route::get('users','IndexController@users')->name('users.users');
+Route::get('attendance','IndexController@attendance')->name('users.attendance');
+
+//出勤退勤ボタン
+Route::post('start', 'TimeController@start')->name('time.start_time');
+Route::post('end', 'TimeController@end')->name('time.end_time');
+
 // ログイン認証
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');

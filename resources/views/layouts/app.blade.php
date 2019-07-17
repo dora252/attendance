@@ -2,18 +2,27 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>勤怠管理</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!--CSRF-->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        
+        <title>勤怠管理</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
-
     <body>
 
         @include('commons.navbar')
         
         <div class="container">
             @include('commons.error_messages')
-            
             @yield('content')
         </div>
         
