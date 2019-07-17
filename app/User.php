@@ -33,11 +33,12 @@ class User extends Authenticatable
         return $this->hasMany(Time::class);
     }
     
-    public function getusers()
+    /*public function getusers()
     {
         $user = $user->id;
         $userstart = $user->times()->start_time();
         $userend = $user->times()->end_time();
-        return User::whereIn('user_id', $user);
+            return User::whereIn('user_id', $user);
     }
+    */
 }
